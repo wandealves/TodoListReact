@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import Item from './Item';
+
 import TodoForm from './TodoForm';
 import List from "./List";
 
@@ -8,7 +10,9 @@ import "./Todo.css";
 function Todo() {
   const [items, setItems] = useState([]);
 
-  function onAddItem(item) {
+  function onAddItem(text) {
+    let item = new Item(text);
+
     setItems([...items, item]);
   }
 
