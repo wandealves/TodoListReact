@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import Item from "./Item";
+import Item from "./components/Item";
 
-import TodoForm from "./TodoForm";
-import List from "./List";
+import TodoForm from "./components/TodoForm";
+import List from "./components/List";
 
 import "./Todo.css";
 
