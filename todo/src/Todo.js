@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import "./Todo.css";
 
+import List from './List';
+
 function Todo() {
   const [text, setText] = useState("");
   const [items, setItems] = useState([]);
@@ -27,11 +29,7 @@ function Todo() {
         <input onChange={handleChange} type="text" value={text}></input>
         <button onClick={addItem}>Add</button>
       </form>
-      <ul>
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
+      <List items={items}></List>
     </div>
   );
 }
